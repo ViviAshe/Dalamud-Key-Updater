@@ -124,11 +124,18 @@ namespace DalamudKey_Updater
                 File.WriteAllText(filePath, updatedJsonContent);
 
                 Console.WriteLine("JSON file updated successfully.");
+                label1.Text = "Config updated";
+                SaveBranchButton.Enabled = false;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void BranchComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SaveBranchButton.Enabled = true;
         }
     }
 }
