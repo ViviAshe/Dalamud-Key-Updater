@@ -113,20 +113,14 @@ namespace DalamudKey_Updater
 
             try
             {
-                // Read the JSON file content
                 string jsonContent = File.ReadAllText(filePath);
-
-                // Parse the JSON content into a JObject
                 JObject jsonObject = JObject.Parse(jsonContent);
 
-                // Edit the keys
                 jsonObject["DalamudBetaKey"] = selected.Key;
                 jsonObject["DalamudBetaKind"] = selected.Track;
 
-                // Serialize the updated JObject back to a JSON string
                 string updatedJsonContent = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
 
-                // Write the updated JSON back to the file
                 File.WriteAllText(filePath, updatedJsonContent);
 
                 Console.WriteLine("JSON file updated successfully.");
