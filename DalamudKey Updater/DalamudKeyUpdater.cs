@@ -1,4 +1,4 @@
-﻿using DalamudKey_Updater.Properties;
+﻿using DalamudKeyUpdater.Properties;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -14,9 +14,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DalamudKey_Updater
+namespace DalamudKeyUpdater
 {
-    public partial class Form1 : Form
+    public partial class DalamudKeyUpdater : Form
     {
 
         private const string BranchInfoUrl = "https://kamori.goats.dev/Dalamud/Release/Meta";
@@ -25,7 +25,7 @@ namespace DalamudKey_Updater
         private bool ready = false;
         private List<VersionEntry> versions = new List<VersionEntry>();
 
-        public Form1()
+        public DalamudKeyUpdater()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace DalamudKey_Updater
             //MessageBox.Show(rawjson);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void DalamudKeyUpdater_Load (object sender, EventArgs e)
         {
             Task.Run(async () =>
             {

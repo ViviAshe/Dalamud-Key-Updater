@@ -1,6 +1,6 @@
-﻿namespace DalamudKey_Updater
+﻿namespace DalamudKeyUpdater
 {
-    partial class Form1
+    partial class DalamudKeyUpdater
     {
         /// <summary>
         /// Required designer variable.
@@ -82,7 +82,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Dalamud Key Updater";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.DalamudKeyUpdater_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
